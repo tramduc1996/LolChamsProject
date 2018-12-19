@@ -59,6 +59,4 @@ typings/
 
 iisnode/
 
-# MicrosoftSQL
-.env
-mssql.js
+

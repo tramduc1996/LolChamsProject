@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const routes = require("./server/routes");
 const dotenv = require("dotenv");
+const mssql = require("./mssql");
 const path = require("path");
 
 dotenv.config();
