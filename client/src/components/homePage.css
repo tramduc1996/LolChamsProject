@@ -1,0 +1,15 @@
+header.masthead {
+  width: 100%;
+  background: url(homepage-bg.jpg) no-repeat center center ; 
+  font-family: "Times New Roman", Times, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pushDown {
+  margin-top: 450px;
+}
