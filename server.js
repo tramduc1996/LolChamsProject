@@ -15,11 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/", routes);
-
-app.get("/", (req, res) => {
-  res.send(`PORT: ${port}`);
-});
+app.use("/api", routes);
 
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, "client/build")));

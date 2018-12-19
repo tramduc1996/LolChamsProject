@@ -5,7 +5,7 @@ const highlightVideosRoutes = require("./highlightVideos.routes");
 const messageRoutes = require("./message.routes");
 module.exports = router;
 
-router.use("/api/message", messageRoutes);
-router.use("/api/industry", industryRoutes);
-router.use("/api/champions", championRoutes);
-router.use("/api/highlightVideos", highlightVideosRoutes);
+router.use("/message", messageRoutes);
+router.use("/industry", industryRoutes);
+router.use("/champions", championRoutes);
+router.use("/highlightVideos", highlightVideosRoutes);
