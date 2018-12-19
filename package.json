@@ -23,9 +23,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-lint": "eslint --ignore-pattern \"build\" --ignore-path .gitignore .",
     "server": " nodemon server.js",
-    "client": " cd client && npm run start ",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "client": "cd client && npm run start ",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
     "nodemon": "^1.18.7"

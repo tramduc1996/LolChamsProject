@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -Eeuxo pipefail
+
+rm -rf temp-deploy
+mkdir -p temp-deploy/public
+
+# build and copy client
+(
+  cd client
+  npm run build
+  cp -r build/* ../temp-deploy/public
+)
+
+# copy server
+(
+  cd server
+  ls | grep -v node_modules | xargs -i cp -R '{}' ../temp-deploy
+)
+
+# deploy
+(
+  cd temp-deploy
+  git init
+  git add --all
+  git commit -m 'deploy'
+  git remote add heroku https://git.heroku.com/gentle-beyond-75919.git
+  git push heroku HEAD --force
+  cd ..
+  rm -rf temp-deploy
+)
