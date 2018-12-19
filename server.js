@@ -22,11 +22,15 @@ app.get("/", (req, res) => {
   res.send(`PORT: ${port}`);
 });
 
+app.use(express.static(__dirname + "/public"));
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
 // Serve static files from the React frontend app
-app.use(express.static(__dirname + "client/public"));
+app.use(express.static(path.join(__dirname, "client/build")));
 // Anything that doesn't match the above, send back index.html
 app.get("*", (req, res) => {
-  res.sendFile(__dirname + "client/public/index.html");
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

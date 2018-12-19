@@ -15,6 +15,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "joi": "^14.3.0",
+    "path": "^0.12.7",
     "serve": "^10.1.1",
     "tedious": "^3.0.1",
     "tedious-connection-pool": "^1.0.5"
@@ -23,9 +24,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-lint": "eslint --ignore-pattern \"build\" --ignore-path .gitignore .",
     "server": " nodemon server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "cd client && npm run start ",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "devDependencies": {
     "nodemon": "^1.18.7"
