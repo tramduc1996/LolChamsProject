@@ -24,7 +24,8 @@
     "test-lint": "eslint --ignore-pattern \"build\" --ignore-path .gitignore .",
     "server": " nodemon server.js",
     "client": " cd client && npm run start ",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "devDependencies": {
     "nodemon": "^1.18.7"
